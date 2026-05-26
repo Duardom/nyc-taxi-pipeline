@@ -15,3 +15,7 @@ Create dataset infraestructure to load data
 - 11,729 trips has less than 1 mitute or more than 300 minutes
 - Those records will be filtered on transformatin phase
 - Clean data represents %98.95 of original dataset
+
+## Phase 3: Data transformation
+
+- Creating new table on bigQyuery excluding travel times larger than 300 minutes and less than 1 minute
