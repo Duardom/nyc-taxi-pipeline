@@ -19,3 +19,4 @@ Create dataset infraestructure to load data
 ## Phase 3: Data transformation
 
 - Creating new table on bigQyuery excluding travel times larger than 300 minutes and less than 1 minute
+- Adding minute and day of week columns to BigQuery table
