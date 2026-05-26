@@ -20,3 +20,4 @@ Create dataset infraestructure to load data
 
 - Creating new table on bigQyuery excluding travel times larger than 300 minutes and less than 1 minute
 - Adding minute and day of week columns to BigQuery table
+- Adding travel travel category column to clean BigQuery table, new column values based on travel time
