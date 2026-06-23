@@ -1,23 +1,36 @@
-# nyc-taxi-pipeline
+# NYC Taxi Pipeline
 Practice pipeline building for NY Taxi dataset
+End-to-end data engineering pipeline built with Python, SQL and Google Cloud Platform using NYC For-Hire Vehicle (FHV) trip data from January 2023.
 
-## Phase 1: Data expliration
-Practice some data exploration on paruet file using pandas
-Define business questions and calculate for answers 
+## Tech Stack
+- Python (pandas)
+- Google Cloud Storage
+- BigQuery
+- GitHub
 
-## Phase 2: Data ingesition
-Creatig bucket for cloud project using Google Cloud Platform
-Create dataset infraestructure to load data
+## Phase 1: Data Exploration
+- Loaded FHV dataset (1,114,320 trips) using pandas
+- Defined 4 business questions to answer throughout the projects
+- Identified data quality issues
 
-### Data quality findings
+## Phase 2: Data Ingestion
+- Upload raw ´.parquet´ file to Google Cloud Storage
+- Created ´viajes_fvh´ table in BigQuery
+- Loaded 1,114,320 records from GCS to BigQuery
 
-- Original dataset contains 1,114320 trips
-- 11,729 trips has less than 1 mitute or more than 300 minutes
+### Data Quality Findings
+- Original dataset contains 1,114,320 trips
+- 11,729 trips hhad a duration of less than 1 minute or more than 300 minutes
 - Those records will be filtered on transformatin phase
 - Clean data represents %98.95 of original dataset
 
-## Phase 3: Data transformation
+## Phase 3: Data Transformation
+- Created ´viajes_fvh_limpio´ table excluding invalid trip durations
+- Added ´hora´, ´dia_semana´, and ´categoria_viaje´ columns
+- Answered 4 business questions directly in BigQuery using SQL
 
-- Creating new table on bigQyuery excluding travel times larger than 300 minutes and less than 1 minute
-- Adding minute and day of week columns to BigQuery table
-- Adding travel travel category column to clean BigQuery table, new column values based on travel time
+## Business Questions
+1. Which hours of the day have the most trips?
+2. Which destination zones are most popular?
+3. Which company dispatches the most trips?
+4. On which days of the week are trips longest?
