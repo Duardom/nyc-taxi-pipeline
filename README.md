@@ -20,7 +20,7 @@ End-to-end data engineering pipeline built with Python, SQL and Google Cloud Pla
 
 ### Data Quality Findings
 - Original dataset contains 1,114,320 trips
-- 11,729 trips hhad a duration of less than 1 minute or more than 300 minutes
+- 11,729 trips had a duration of less than 1 minute or more than 300 minutes
 - Those records will be filtered on transformatin phase
 - Clean data represents %98.95 of original dataset
 
@@ -34,3 +34,8 @@ End-to-end data engineering pipeline built with Python, SQL and Google Cloud Pla
 2. Which destination zones are most popular?
 3. Which company dispatches the most trips?
 4. On which days of the week are trips longest?
+
+## Phase 4: Orchestration
+- Built ´pipeline.py´ using Prefect to automate the full ETL flow
+- Pipeline consist of 3 tasks: upload to GCS, load to BigQuery, tansform data
+- Each tasks is logged and tracked with execution status and timing
