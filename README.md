@@ -39,3 +39,7 @@ End-to-end data engineering pipeline built with Python, SQL and Google Cloud Pla
 - Built ´pipeline.py´ using Prefect to automate the full ETL flow
 - Pipeline consist of 3 tasks: upload to GCS, load to BigQuery, tansform data
 - Each tasks is logged and tracked with execution status and timing
+
+## Dashboard
+
+![NYC FVH Dashboard](images/dashboard.png)
